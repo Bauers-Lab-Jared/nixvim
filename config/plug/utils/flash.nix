@@ -1,7 +1,7 @@
 {
   plugins.flash = {
     enable = true;
-    labels = "asdfghjklqwertyuiopzxcvbnm";
+    labels = "asdflqwertuiocbnm";
     search = {
       mode = "fuzzy";
     };
@@ -19,7 +19,7 @@
   keymaps = [
     {
       mode = ["n" "x" "o"];
-      key = "s";
+      key = "z";
       action = "<cmd>lua require('flash').jump()<cr>";
       options = {
         desc = "Flash";
@@ -28,7 +28,7 @@
 
     {
       mode = ["n" "x" "o"];
-      key = "S";
+      key = "<C-z>";
       action = "<cmd>lua require('flash').treesitter()<cr>";
       options = {
         desc = "Flash Treesitter";
@@ -46,7 +46,7 @@
 
     {
       mode = ["x" "o"];
-      key = "R";
+      key = "<C-r>";
       action = "<cmd>lua require('flash').treesitter_search()<cr>";
       options = {
         desc = "Treesitter Search";

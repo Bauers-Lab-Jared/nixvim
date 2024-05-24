@@ -8,7 +8,6 @@
     ./sets.nix
     ./highlight.nix
 
-    ./plug/colorscheme/biscuit.nix
     ./plug/colorscheme/colorscheme.nix
 
     ./plug/completion/cmp.nix
@@ -32,14 +31,11 @@
     ./plug/snippets/luasnip.nix
 
     ./plug/statusline/lualine.nix
-    #./plug/statusline/staline.nix
 
     #./plug/treesitter/treesitter-context.nix
     ./plug/treesitter/treesitter-textobjects.nix
     ./plug/treesitter/treesitter.nix
 
-    #./plug/ui/alpha.nix
-    ./plug/ui/btw.nix
     ./plug/ui/bufferline.nix
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
@@ -48,25 +44,22 @@
     ./plug/utils/comment.nix
     ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
-    ./plug/utils/hardtime.nix
     #./plug/utils/harpoon.nix
     ./plug/utils/grapple.nix
     ./plug/utils/illuminate.nix
-    ./plug/utils/nvim-autopairs.nix
-    ./plug/utils/oil.nix
     ./plug/utils/undotree.nix
     ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix
   ];
   options = {
     theme = lib.mkOption {
-      default = "paradise";
+      default = "tokyonight";
       type = lib.types.enum ["paradise" "decay" "mountain" "tokyonight" "everforest" "everblush" "jellybeans" "aquarium" "gruvbox"];
     };
   };
   config = {
     # The base16 theme to use, if you want to use another theme, change it in colorscheme.nix
-    theme = "paradise";
+    theme = "tokyonight";
     extraConfigLua = ''
       _G.theme = "${config.theme}"
     '';

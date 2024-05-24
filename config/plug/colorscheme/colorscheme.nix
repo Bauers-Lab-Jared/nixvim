@@ -3,7 +3,7 @@
 in {
   colorschemes = {
     base16 = {
-      enable = true;
+      enable = false;
       setUpBar = false;
       colorscheme = import ../../colors/${config.theme}.nix {};
     };
@@ -13,11 +13,32 @@ in {
         transparent_mode = true;
       };
     };
-    tokyonight = {
+    onedark = {
       enable = false;
       settings = {
-        style = "night";
+        style = "deep";
         transparent = true;
+        ending_tildes = true;
+
+        code_style = {
+          comments = "italic";
+          keywords = "bold";
+          functions = "bold";
+        };
+
+        highlights = {
+          TelescopeBorder.fg = "$orange";
+          TelescopePromptBorder.fg = "$blue";
+          TelescopeResultsBorder.fg = "$blue";
+          TelescopePreviewBorder.fg = "$blue";
+        };
+      };
+    };
+    tokyonight = {
+      enable = true;
+      settings = {
+        style = "storm";
+        transparent = false;
         onHighlights = ''
           function(hl, c)
               local prompt = "#2d3149"

@@ -4,15 +4,10 @@
     lsp = {
       enable = true;
       servers = {
-        eslint = {enable = true;};
         html = {enable = true;};
+        jsonls.enable = true;
         lua-ls = {enable = true;};
-        nil_ls = {enable = true;};
         marksman = {enable = true;};
-        pyright = {enable = true;};
-        gopls = {enable = true;};
-        terraformls = {enable = true;};
-        tsserver = {enable = false;};
         yamlls = {
           enable = true;
         };
@@ -40,9 +35,9 @@
             action = "type_definition";
             desc = "Type Definition";
           };
-          K = {
+          "<leader>cc" = {
             action = "hover";
-            desc = "Hover";
+            desc = "Info on selected";
           };
           "<leader>cw" = {
             action = "workspace_symbol";
@@ -58,11 +53,11 @@
             action = "open_float";
             desc = "Line Diagnostics";
           };
-          "[d" = {
+          "]d" = {
             action = "goto_next";
             desc = "Next Diagnostic";
           };
-          "]d" = {
+          "[d" = {
             action = "goto_prev";
             desc = "Previous Diagnostic";
           };

@@ -8,6 +8,7 @@ in {
   plugins = {
     bufferline = {
       enable = true;
+      showBufferCloseIcons = false;
       separatorStyle = "thick"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
       highlights = lib.mkIf config.colorschemes.base16.enable {
         fill = {
@@ -66,7 +67,7 @@ in {
   keymaps = [
     {
       mode = "n";
-      key = "<Tab>";
+      key = "m";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
@@ -75,7 +76,7 @@ in {
 
     {
       mode = "n";
-      key = "<S-Tab>";
+      key = "M";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";
@@ -84,52 +85,7 @@ in {
 
     {
       mode = "n";
-      key = "<S-l>";
-      action = "<cmd>BufferLineCycleNext<cr>";
-      options = {
-        desc = "Cycle to next buffer";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<S-h>";
-      action = "<cmd>BufferLineCyclePrev<cr>";
-      options = {
-        desc = "Cycle to previous buffer";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>bd";
-      action = "<cmd>bdelete<cr>";
-      options = {
-        desc = "Delete buffer";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>bb";
-      action = "<cmd>e #<cr>";
-      options = {
-        desc = "Switch to Other Buffer";
-      };
-    }
-
-    # {
-    #   mode = "n";
-    #   key = "<leader>`";
-    #   action = "<cmd>e #<cr>";
-    #   options = {
-    #     desc = "Switch to Other Buffer";
-    #   };
-    # }
-
-    {
-      mode = "n";
-      key = "<leader>br";
+      key = "<leader>bdr";
       action = "<cmd>BufferLineCloseRight<cr>";
       options = {
         desc = "Delete buffers to the right";
@@ -138,7 +94,7 @@ in {
 
     {
       mode = "n";
-      key = "<leader>bl";
+      key = "<leader>bdl";
       action = "<cmd>BufferLineCloseLeft<cr>";
       options = {
         desc = "Delete buffers to the left";
@@ -147,7 +103,7 @@ in {
 
     {
       mode = "n";
-      key = "<leader>bo";
+      key = "<leader>bdo";
       action = "<cmd>BufferLineCloseOthers<cr>";
       options = {
         desc = "Delete other buffers";
@@ -165,11 +121,18 @@ in {
 
     {
       mode = "n";
-      key = "<leader>bP";
+      key = "<leader>bdd";
       action = "<Cmd>BufferLineGroupClose ungrouped<CR>";
       options = {
         desc = "Delete non-pinned buffers";
       };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bn";
+      action = "<cmd>enew<cmd>";
+      options.desc = "Window [n]ew buffer";
     }
   ];
 }

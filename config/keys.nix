@@ -11,12 +11,6 @@
 
     {
       mode = "n";
-      key = "<leader>s";
-      action = "+search";
-    }
-
-    {
-      mode = "n";
       key = "<leader>q";
       action = "+quit/session";
     }
@@ -33,23 +27,11 @@
       action = "+ui";
     }
 
-    {
-      mode = "n";
-      key = "<leader>w";
-      action = "+windows";
-    }
-
-    {
-      mode = "n";
-      key = "<leader><Tab>";
-      action = "+tab";
-    }
-
-    {
-      mode = ["n" "v"];
-      key = "<leader>d";
-      action = "+debug";
-    }
+    # {
+    #   mode = ["n" "v"];
+    #   key = "<leader>d";
+    #   action = "+debug";
+    # }
 
     {
       mode = ["n" "v"];
@@ -57,58 +39,68 @@
       action = "+code";
     }
 
-    {
-      mode = ["n" "v"];
-      key = "<leader>t";
-      action = "+test";
-    }
-
-    # Tabs
-    {
-      mode = "n";
-      key = "<leader><tab><tab>";
-      action = "<cmd>tabnew<cr>";
-      options = {
-        silent = true;
-        desc = "New Tab";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader><tab>d";
-      action = "<cmd>tabclose<cr>";
-      options = {
-        silent = true;
-        desc = "Close tab";
-      };
-    }
+    # {
+    #   mode = ["n" "v"];
+    #   key = "<leader>t";
+    #   action = "+test";
+    # }
 
     # Windows
+
+    {
+      key = "<leader>w";
+      action = ":wincmd w<CR>";
+      options = {
+        desc = "Window next";
+        silent = true;
+      };
+      mode = "n";
+    }
+
     {
       mode = "n";
-      key = "<leader>ww";
-      action = "<C-W>p";
+      key = "<leader><up>";
+      action = ":wincmd k<CR>";
       options = {
+        desc = "Window focus up";
         silent = true;
-        desc = "Other window";
       };
     }
 
     {
       mode = "n";
-      key = "<leader>wd";
-      action = "<C-W>c";
+      key = "<leader><down>";
+      action = ":wincmd j<CR>";
       options = {
+        desc = "Window focus down";
         silent = true;
-        desc = "Delete window";
       };
     }
 
     {
       mode = "n";
-      key = "<leader>w-";
-      action = "<C-W>s";
+      key = "<leader><left>";
+      action = ":wincmd h<CR>";
+      options = {
+        desc = "Window focus left";
+        silent = true;
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader><right>";
+      action = ":wincmd l<CR>";
+      options = {
+        desc = "Window focus right";
+        silent = true;
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader><leader>s";
+      action = ":wincmd s<CR>";
       options = {
         silent = true;
         desc = "Split window below";
@@ -117,8 +109,8 @@
 
     {
       mode = "n";
-      key = "<leader>w|";
-      action = "<C-W>v";
+      key = "<leader><leader>v";
+      action = ":wincmd v<CR>";
       options = {
         silent = true;
         desc = "Split window right";
@@ -127,55 +119,46 @@
 
     {
       mode = "n";
-      key = "<C-h>";
-      action = "<C-W>h";
+      key = "<leader><leader>o";
+      action = ":wincmd o<CR>";
       options = {
         silent = true;
-        desc = "Move to window left";
+        desc = "Delete other windows";
       };
     }
 
     {
       mode = "n";
-      key = "<C-l>";
-      action = "<C-W>l";
+      key = "<leader><leader>d";
+      action = ":wincmd q<CR>";
       options = {
         silent = true;
-        desc = "Move to window right";
+        desc = "Delete this window";
       };
     }
 
     {
       mode = "n";
-      key = "<C-k>";
-      action = "<C-W>k";
+      key = "<leader><leader>x";
+      action = ":wincmd x<CR>";
       options = {
         silent = true;
-        desc = "Move to window over";
+        desc = "Swap windows";
       };
     }
 
     {
       mode = "n";
-      key = "<C-j>";
-      action = "<C-W>j";
-      options = {
-        silent = true;
-        desc = "Move to window bellow";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<C-s>";
+      key = "<leader>r";
       action = "<cmd>w<cr><esc>";
       options = {
         silent = true;
-        desc = "Save file";
+        desc = "Write file";
       };
     }
 
     # Quit/Session
+
     {
       mode = "n";
       key = "<leader>qq";
@@ -183,6 +166,16 @@
       options = {
         silent = true;
         desc = "Quit all";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>q!";
+      action = ":qa!<CR>";
+      options = {
+        silent = true;
+        desc = "Force quit all";
       };
     }
 
@@ -241,19 +234,19 @@
 
     {
       mode = "n";
-      key = "<C-d>";
+      key = "<Tab>";
       action = "<C-d>zz";
       options = {
-        desc = "Allow C-d and C-u to keep the cursor in the middle";
+        desc = "Scroll Down";
       };
     }
 
     {
       mode = "n";
-      key = "<C-u>";
+      key = "<S-Tab>";
       action = "<C-u>zz";
       options = {
-        desc = "Allow C-d and C-u to keep the cursor in the middle";
+        desc = "Scroll Up";
       };
     }
 
@@ -280,24 +273,18 @@
     }
 
     # Copy stuff to system clipboard with <leader> + y or just y to have it just in vim
-    {
-      mode = ["n" "v"];
-      key = "<leader>y";
-      action = ''"+y'';
-      options = {desc = "Copy to system clipboard";};
-    }
 
     {
       mode = ["n" "v"];
-      key = "<leader>Y";
-      action = ''"+Y'';
+      key = "Y";
+      action = ''"+y'';
       options = {desc = "Copy to system clipboard";};
     }
 
     # Delete to void register
     {
       mode = ["n" "v"];
-      key = "<leader>D";
+      key = "D";
       action = ''"_d'';
       options = {desc = "Delete to void register";};
     }
@@ -318,63 +305,63 @@
 
     {
       mode = "n";
-      key = "<leader>m";
+      key = "\\";
       action = "<CMD> Grapple toggle <CR>";
-      options = {desc = "Grapple Toggle tag";};
+      options = {desc = "Tag a file";};
     }
 
     {
       mode = "n";
-      key = "<leader>k";
+      key = "<leader>m";
       action = "<CMD> Grapple toggle_tags <CR>";
-      options = {desc = "Grapple Toggle tag";};
+      options = {desc = "Toggle tags menu";};
     }
 
     {
       mode = "n";
-      key = "<leader>K";
+      key = "<leader>M";
       action = "<CMD> Grapple toggle_scopes <CR>";
       options = {desc = "Grapple Toggle scopes";};
     }
 
     {
       mode = "n";
-      key = "<leader>j";
+      key = "<leader><Tab>";
       action = "<CMD> Grapple cycle forward <CR>";
       options = {desc = "Grapple Cycle forward";};
     }
 
     {
       mode = "n";
-      key = "<leader>J";
+      key = "<leader><S-Tab>";
       action = "<CMD> Grapple cycle backward <CR>";
       options = {desc = "Grapple Cycle backward";};
     }
 
     {
       mode = "n";
-      key = "<leader>1";
+      key = "<leader>]";
       action = "<CMD> Grapple select index=1<CR>";
       options = {desc = "Grapple Select 1";};
     }
 
     {
       mode = "n";
-      key = "<leader>2";
+      key = "<leader>[";
       action = "<CMD> Grapple select index=2<CR>";
       options = {desc = "Grapple Select 2";};
     }
 
     {
       mode = "n";
-      key = "<leader>3";
+      key = "<leader>=";
       action = "<CMD> Grapple select index=3<CR>";
       options = {desc = "Grapple Select 3";};
     }
 
     {
       mode = "n";
-      key = "<leader>4";
+      key = "<leader>-";
       action = "<CMD> Grapple select index=4<CR>";
       options = {desc = "Grapple Select 4";};
     }

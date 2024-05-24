@@ -20,12 +20,6 @@
       };
     };
     keymaps = {
-      "<leader><space>" = {
-        action = "find_files, {}";
-        options = {
-          desc = "Find project files";
-        };
-      };
       "<leader>/" = {
         action = "live_grep";
         options = {
@@ -33,6 +27,12 @@
         };
       };
       "<leader>:" = {
+        action = "command_history, {}";
+        options = {
+          desc = "Command History";
+        };
+      };
+      "<leader>;" = {
         action = "command_history, {}";
         options = {
           desc = "Command History";
@@ -50,19 +50,19 @@
           desc = "Find project files";
         };
       };
-      "<leader>fr" = {
+      "<leader>fn" = {
         action = "live_grep, {}";
         options = {
           desc = "Find text";
         };
       };
-      "<leader>fR" = {
+      "<leader>fr" = {
         action = "resume, {}";
         options = {
           desc = "Resume";
         };
       };
-      "<leader>fg" = {
+      "<leader>f." = {
         action = "oldfiles, {}";
         options = {
           desc = "Recent";
@@ -74,7 +74,7 @@
           desc = "Buffers";
         };
       };
-      "<C-p>" = {
+      "<leader>fg" = {
         action = "git_files, {}";
         options = {
           desc = "Search git files";
@@ -92,79 +92,67 @@
           desc = "Status";
         };
       };
-      "<leader>sa" = {
+      "<leader>fa" = {
         action = "autocommands, {}";
         options = {
           desc = "Auto Commands";
         };
       };
-      "<leader>sb" = {
+      "<leader>fz" = {
         action = "current_buffer_fuzzy_find, {}";
         options = {
           desc = "Buffer";
         };
       };
-      "<leader>sc" = {
-        action = "command_history, {}";
-        options = {
-          desc = "Command History";
-        };
-      };
-      "<leader>sC" = {
+      "<leader>fc" = {
         action = "commands, {}";
         options = {
           desc = "Commands";
         };
       };
-      "<leader>sD" = {
+      "<leader>fD" = {
         action = "diagnostics, {}";
         options = {
           desc = "Workspace diagnostics";
         };
       };
-      "<leader>sh" = {
+      "<leader>fh" = {
         action = "help_tags, {}";
         options = {
           desc = "Help pages";
         };
       };
-      "<leader>sH" = {
+      "<leader>fH" = {
         action = "highlights, {}";
         options = {
           desc = "Search Highlight Groups";
         };
       };
-      "<leader>sk" = {
+      "<leader>fk" = {
         action = "keymaps, {}";
         options = {
           desc = "Keymaps";
         };
       };
-      "<leader>sM" = {
+      "<leader>fM" = {
         action = "man_pages, {}";
         options = {
           desc = "Man pages";
         };
       };
-      "<leader>sm" = {
+      "<leader>fm" = {
         action = "marks, {}";
         options = {
           desc = "Jump to Mark";
         };
       };
-      "<leader>so" = {
+      "<leader>fo" = {
         action = "vim_options, {}";
         options = {
           desc = "Options";
         };
       };
-      "<leader>sR" = {
-        action = "resume, {}";
-        options = {
-          desc = "Resume";
-        };
-      };
-      "<leader>uC" = {
+      "<leader>uc" = {
         action = "colorscheme, {}";
         options = {
           desc = "Colorscheme preview";
@@ -175,7 +163,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<leader>sd";
+      key = "<leader>fd";
       action = "<cmd>Telescope diagnostics bufnr=0<cr>";
       options = {
         desc = "Document diagnostics";
@@ -186,7 +174,7 @@
       key = "<leader>fe";
       action = "<cmd>Telescope file_browser<cr>";
       options = {
-        desc = "File browser";
+        desc = "root File browser";
       };
     }
     {
@@ -194,7 +182,7 @@
       key = "<leader>fE";
       action = "<cmd>Telescope file_browser path=%:p:h select_buffer=true<cr>";
       options = {
-        desc = "File browser";
+        desc = "local File browser";
       };
     }
   ];

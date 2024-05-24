@@ -1,41 +1,41 @@
-{
+{pkgs, ...}: {
   config = {
     opts = {
       # Enable relative line numbers
       number = true;
       relativenumber = true;
 
-      # Set tabs to 2 spaces
-      tabstop = 2;
-      softtabstop = 2;
-      showtabline = 2;
+      # Set tabs to 4 spaces
+      tabstop = 4;
+      softtabstop = 4;
+      showtabline = 4;
       expandtab = true;
 
       # Enable auto indenting and set it to spaces
       smartindent = true;
-      shiftwidth = 2;
+      shiftwidth = 4;
 
       # Enable smart indenting (see https://stackoverflow.com/questions/1204149/smart-wrap-in-vim)
       breakindent = true;
 
       # Enable incremental searching
-      hlsearch = true;
+      hlsearch = false;
       incsearch = true;
 
       # Enable text wrap
-      wrap = true;
+      wrap = false;
 
       # Better splitting
       splitbelow = true;
       splitright = true;
 
       # Enable mouse mode
-      mouse = "a"; # Mouse
+      # mouse = "a"; # Mouse
 
       # Enable ignorecase + smartcase for better searching
       ignorecase = true;
       smartcase = true; # Don't ignore case with capitals
-      grepprg = "rg --vimgrep";
+      grepprg = "${pkgs.ripgrep} --vimgrep";
       grepformat = "%f:%l:%c:%m";
 
       # Decrease updatetime
@@ -53,7 +53,7 @@
       termguicolors = true;
 
       # Enable the sign column to prevent the screen from jumping
-      # signcolumn = "yes";
+      signcolumn = "yes";
 
       # Enable cursor line highlight
       cursorline = true; # Highlight the line where the cursor is located
@@ -67,10 +67,10 @@
       foldenable = true;
 
       # Always keep 8 lines above/below cursor unless at start/end of file
-      scrolloff = 8;
+      scrolloff = 12;
 
       # Place a column line
-      # colorcolumn = "80";
+      colorcolumn = "80";
 
       # Reduce which-key timeout to 10ms
       timeoutlen = 10;
@@ -83,7 +83,7 @@
       cmdheight = 0;
 
       # We don't need to see things like INSERT anymore
-      showmode = false;
+      # showmode = false;
     };
   };
 }

@@ -9,7 +9,7 @@
       codeAction = "💡"; # Can be any symbol you want 💡
     };
     hover = {
-      openCmd = "!floorp"; # Choose your browser
+      openCmd = "!$BROWSER"; # Choose your browser
       openLink = "gx";
     };
     diagnostic = {
@@ -42,7 +42,7 @@
       autoSave = false;
       keys = {
         exec = "<CR>";
-        quit = ["<C-k>" "<Esc>"];
+        quit = "<Esc>";
         select = "x";
       };
     };
@@ -53,14 +53,14 @@
       layout = "normal"; # normal or float
       winPosition = "right"; # left or right
       keys = {
-        jump = "e";
+        jump = "z";
         quit = "q";
-        toggleOrJump = "o";
+        toggleOrJump = "<space>";
       };
     };
     scrollPreview = {
-      scrollDown = "<C-f>";
-      scrollUp = "<C-b>";
+      scrollDown = "<Tab>";
+      scrollUp = "<S-Tab>";
     };
   };
   keymaps = [
@@ -115,7 +115,7 @@
 
     {
       mode = "n";
-      key = "K";
+      key = "<leader>cc";
       action = "<cmd>Lspsaga hover_doc<CR>";
       options = {
         desc = "Hover";
@@ -125,7 +125,7 @@
 
     {
       mode = "n";
-      key = "<leader>cw";
+      key = "<leader>co";
       action = "<cmd>Lspsaga outline<CR>";
       options = {
         desc = "Outline";
@@ -165,7 +165,7 @@
 
     {
       mode = "n";
-      key = "[d";
+      key = "]d";
       action = "<cmd>Lspsaga diagnostic_jump_next<CR>";
       options = {
         desc = "Next Diagnostic";
@@ -175,7 +175,7 @@
 
     {
       mode = "n";
-      key = "]d";
+      key = "[d";
       action = "<cmd>Lspsaga diagnostic_jump_prev<CR>";
       options = {
         desc = "Previous Diagnostic";
