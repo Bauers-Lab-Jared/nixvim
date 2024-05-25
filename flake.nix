@@ -36,11 +36,16 @@
           inherit pkgs;
           module = ./config;
         };
+        nvim-odin = nvim.nixvimExtend (import ./languages/odin.nix);
       in {
         checks = {
           default = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
             inherit nvim;
             name = "A nixvim configuration";
+          };
+          odin = pkgs.nixvimLib.check.mkTestDerivationFromNvim {
+            inherit nvim-odin;
+            name = "A nixvim configuration for odin projects";
           };
           pre-commit-check = pre-commit-hooks.lib.${system}.run {
             src = ./.;
@@ -54,6 +59,7 @@
         formatter = pkgs.alejandra;
 
         packages.default = nvim;
+        packages.nvim-odin = nvim-odin;
 
         devShells = {
           default = with pkgs;
