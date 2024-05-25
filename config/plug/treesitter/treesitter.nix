@@ -1,7 +1,4 @@
 {pkgs, ...}: {
-  filetype.extension.liq = "liquidsoap";
-  filetype.extension.nu = "nu";
-
   plugins.treesitter = {
     enable = true;
     indent = true;

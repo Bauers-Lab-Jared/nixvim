@@ -21,12 +21,6 @@
       action = "+git";
     }
 
-    {
-      mode = "n";
-      key = "<leader>u";
-      action = "+ui";
-    }
-
     # {
     #   mode = ["n" "v"];
     #   key = "<leader>d";
@@ -46,6 +40,20 @@
     # }
 
     # Windows
+
+    {
+      key = ",";
+      action = ":";
+      options.desc = ": (command mode)";
+      mode = "n";
+    }
+
+    {
+      key = ";";
+      action = ":";
+      options.desc = ": (command mode)";
+      mode = "n";
+    }
 
     {
       key = "<leader>w";
@@ -180,36 +188,6 @@
     }
 
     {
-      mode = "n";
-      key = "<leader>ul";
-      action = ":lua ToggleLineNumber()<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Line Numbers";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>uL";
-      action = ":lua ToggleRelativeLineNumber()<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Relative Line Numbers";
-      };
-    }
-
-    {
-      mode = "n";
-      key = "<leader>uw";
-      action = ":lua ToggleWrap()<cr>";
-      options = {
-        silent = true;
-        desc = "Toggle Line Wrap";
-      };
-    }
-
-    {
       mode = "v";
       key = "J";
       action = ":m '>+1<CR>gv=gv";
@@ -340,28 +318,28 @@
 
     {
       mode = "n";
-      key = "<leader>]";
+      key = "<F8>";
       action = "<CMD> Grapple select index=1<CR>";
       options = {desc = "Grapple Select 1";};
     }
 
     {
       mode = "n";
-      key = "<leader>[";
+      key = "<F7>";
       action = "<CMD> Grapple select index=2<CR>";
       options = {desc = "Grapple Select 2";};
     }
 
     {
       mode = "n";
-      key = "<leader>=";
+      key = "<F6>";
       action = "<CMD> Grapple select index=3<CR>";
       options = {desc = "Grapple Select 3";};
     }
 
     {
       mode = "n";
-      key = "<leader>-";
+      key = "<F5>";
       action = "<CMD> Grapple select index=4<CR>";
       options = {desc = "Grapple Select 4";};
     }

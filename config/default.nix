@@ -28,6 +28,12 @@
     ./plug/lsp/none-ls.nix
     ./plug/lsp/trouble.nix
 
+    ./plug/mini/ai.nix
+    ./plug/mini/surround.nix
+    ./plug/mini/operators.nix
+    ./plug/mini/files.nix
+    ./plug/mini/hipatterns.nix
+
     ./plug/snippets/luasnip.nix
 
     ./plug/statusline/lualine.nix
@@ -41,12 +47,11 @@
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
 
-    ./plug/utils/comment.nix
     ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
     #./plug/utils/harpoon.nix
     ./plug/utils/grapple.nix
-    ./plug/utils/illuminate.nix
+    # ./plug/utils/illuminate.nix
     ./plug/utils/undotree.nix
     ./plug/utils/ufo.nix
     ./plug/utils/whichkey.nix

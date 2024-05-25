@@ -131,8 +131,8 @@ in {
     {
       mode = "n";
       key = "<leader>bn";
-      action = "<cmd>enew<cmd>";
-      options.desc = "Window [n]ew buffer";
+      action = "<cmd>enew<CR>";
+      options.desc = "New buffer";
     }
   ];
 }

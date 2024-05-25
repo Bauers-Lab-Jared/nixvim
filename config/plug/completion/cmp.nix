@@ -44,7 +44,7 @@
           "<right>" = "cmp.mapping(cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }), {'i', 's'})";
           "<S-Tab>" = "cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 's'})";
           "<Tab>" = "cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 's'})";
-          "<Space>" = "cmp.mapping(cmp.mapping.complete(), {'i', 's'})";
+          "<C-Space>" = "cmp.mapping(cmp.mapping.complete(), {'i', 's'})";
         };
       };
     };

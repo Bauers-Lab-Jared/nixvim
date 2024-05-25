@@ -26,7 +26,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "u";
+      key = "<leader>u";
       action = "<cmd>UndotreeToggle<CR>";
       options = {
         silent = true;
@@ -34,4 +34,7 @@
       };
     }
   ];
+  extraConfigLua = ''
+    vim.opt.undodir = "./.nvim/undodir";
+  '';
 }

@@ -6,6 +6,7 @@
       servers = {
         html = {enable = true;};
         jsonls.enable = true;
+        nixd.enable = true;
         lua-ls = {enable = true;};
         marksman = {enable = true;};
         yamlls = {

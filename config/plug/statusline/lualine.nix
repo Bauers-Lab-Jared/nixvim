@@ -8,7 +8,8 @@ in {
       statusline = ["dashboard" "alpha" "starter"];
     };
 
-    sections = {
+    winbar = {
+      lualine_a = ["mode"];
       lualine_b = [
         {
           name = "diagnostic";
@@ -27,14 +28,15 @@ in {
           name = "filename";
           extraConfig = {
             newfile_status = true;
-            path = 2;
+            path = 1;
             symbols = {readonly = "[R/O]";};
           };
         }
       ];
     };
 
-    inactiveSections = {
+    inactiveWinbar = {
+      lualine_a = [];
       lualine_b = [
         {
           name = "diagnostic";
@@ -53,7 +55,7 @@ in {
           name = "filename";
           extraConfig = {
             newfile_status = true;
-            path = 2;
+            path = 1;
             symbols = {readonly = "[R/O]";};
           };
         }

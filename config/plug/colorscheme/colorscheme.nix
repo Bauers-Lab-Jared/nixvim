@@ -14,10 +14,10 @@ in {
       };
     };
     onedark = {
-      enable = false;
+      enable = true;
       settings = {
         style = "deep";
-        transparent = true;
+        transparent = false;
         ending_tildes = true;
 
         code_style = {
@@ -34,8 +34,9 @@ in {
         };
       };
     };
+
     tokyonight = {
-      enable = true;
+      enable = false;
       settings = {
         style = "storm";
         transparent = false;
@@ -105,9 +106,9 @@ in {
       settings = {
         background = {
           light = "macchiato";
-          dark = "mocha";
+          dark = "macchiato";
         };
-        flavour = "frappe"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
+        flavour = "macchiato"; # "latte", "mocha", "frappe", "macchiato" or raw lua code
         disableBold = false;
         disableItalic = false;
         disableUnderline = false;

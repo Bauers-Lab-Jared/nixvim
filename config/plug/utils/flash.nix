@@ -7,6 +7,7 @@
     };
     jump = {
       autojump = true;
+      nohlsearch = true;
     };
     label = {
       uppercase = false;
@@ -15,12 +16,15 @@
         shade = 5;
       };
     };
+    modes = {
+      char.enabled = false;
+    };
   };
   keymaps = [
     {
       mode = ["n" "x" "o"];
       key = "z";
-      action = "<cmd>lua require('flash').jump()<cr>";
+      action = ''<cmd>lua require('flash').jump({ search = { mode = function(str) return "\\<" .. str end, }, })<cr>'';
       options = {
         desc = "Flash";
       };

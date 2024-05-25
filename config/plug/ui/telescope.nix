@@ -98,7 +98,7 @@
           desc = "Auto Commands";
         };
       };
-      "<leader>fz" = {
+      "<leader>f/" = {
         action = "current_buffer_fuzzy_find, {}";
         options = {
           desc = "Buffer";
@@ -152,12 +152,6 @@
           desc = "Options";
         };
       };
-      "<leader>uc" = {
-        action = "colorscheme, {}";
-        options = {
-          desc = "Colorscheme preview";
-        };
-      };
     };
   };
   keymaps = [
@@ -186,13 +180,4 @@
       };
     }
   ];
-  extraConfigLua = ''
-    require("telescope").setup{
-      pickers = {
-        colorscheme = {
-          enable_preview = true
-        }
-      }
-    }
-  '';
 }
