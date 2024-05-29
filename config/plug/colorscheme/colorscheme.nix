@@ -1,20 +1,16 @@
-{config, ...}: let
+{lib, ...}: let
   lua = x: {__raw = x;};
 in {
   colorschemes = {
-    base16 = {
-      enable = false;
-      setUpBar = false;
-      colorscheme = import ../../colors/${config.theme}.nix {};
-    };
     gruvbox = {
       enable = false;
       settings = {
         transparent_mode = true;
       };
     };
+
     onedark = {
-      enable = true;
+      enable = false;
       settings = {
         style = "deep";
         transparent = false;
@@ -32,6 +28,89 @@ in {
           TelescopeResultsBorder.fg = "$blue";
           TelescopePreviewBorder.fg = "$blue";
         };
+      };
+    };
+
+    solarized-osaka = let
+      transparent = true;
+    in {
+      enable = true;
+      settings = {
+        inherit transparent;
+        styles = {
+          sidebars = lib.mkIf transparent "transparent";
+          floats = lib.mkIf transparent "transparent";
+        };
+
+        on_colors =
+          #lua
+          ''
+            function(c)
+              c.bg_statusline = ${
+              if transparent
+              then "c.none"
+              else "c.base04"
+            }
+            end
+          '';
+        on_highlights =
+          #lua
+          ''
+            function(hl, c)
+                hl.WinSeparator = {
+                  fg = c.blue700,
+                  bold = true,
+                }
+                hl.TelescopeBorder = {
+                  fg = c.blue700,
+                }
+                hl.TelescopeNormal = {
+                  fg = c.fg,
+                }
+                hl.StatusLine = {
+                  bg = c.bg_statusline,
+                  fg = c.fg
+                }
+                hl.StatusLineNC = {
+                  bg = c.bg_statusline,
+                  fg = c.fg
+                }
+                hl.lualine_c_normal = {
+                  bg = c.bg_statusline,
+                  fg = c.fg
+                }
+                hl.lualine_b_normal = {
+                  bg = c.bg_statusline,
+                  fg = c.fg
+                }
+                hl.ColorColumn = {
+                  bg = c.blue900
+                }
+                hl.Cursor = {
+                  fg = c.blue900
+                }
+                hl.lCursor = {
+                  fg = c.blue900
+                }
+                hl.CursorIM = {
+                  fg = c.blue900
+                }
+                hl.CursorLine = {
+                  bg = c.blue900
+                }
+                hl.EndOfBuffer = {
+                  fg = c.yellow700
+                }
+                hl.LazyGitBorder = {
+                  fg = c.blue700,
+                  bg = c.base04
+                }
+                hl.LazyGitFloat = {
+                  fg = c.base0,
+                  bg = c.base04
+                }
+            end
+          '';
       };
     };
 

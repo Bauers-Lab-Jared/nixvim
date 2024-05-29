@@ -6,9 +6,9 @@
   imports = [
     ./keys.nix
     ./sets.nix
-    ./highlight.nix
 
     ./plug/colorscheme/colorscheme.nix
+    ./plug/colorscheme/solarized-osaka.nix
 
     ./plug/completion/cmp.nix
     ./plug/completion/copilot-cmp.nix

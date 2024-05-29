@@ -1,67 +1,9 @@
 {
-  config,
-  lib,
-  ...
-}: let
-  colors = import ../../colors/${config.theme}.nix {};
-in {
   plugins = {
     bufferline = {
       enable = true;
       showBufferCloseIcons = false;
       separatorStyle = "thick"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
-      highlights = lib.mkIf config.colorschemes.base16.enable {
-        fill = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-        background = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        bufferSelected = {
-          fg = colors.base05;
-          bg = colors.base00;
-          italic = false;
-        };
-        bufferVisible = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        closeButton = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        closeButtonVisible = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        closeButtonSelected = {
-          fg = colors.base08;
-          bg = colors.base00;
-        };
-
-        indicatorSelected = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-        modified = {
-          fg = colors.base03;
-          bg = colors.base00;
-        };
-        modifiedVisible = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-        modifiedSelected = {
-          fg = colors.base0B;
-          bg = colors.base00;
-        };
-        tabClose = {
-          fg = colors.base00;
-          bg = colors.base00;
-        };
-      };
     };
   };
   keymaps = [

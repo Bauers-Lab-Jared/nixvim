@@ -19,6 +19,9 @@
     };
     symbolInWinbar = {
       enable = true; # Breadcrumbs
+      separator = ">";
+      hideKeyword = true;
+      folderLevel = 0;
     };
     codeAction = {
       extendGitSigns = false;
