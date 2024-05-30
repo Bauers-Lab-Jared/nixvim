@@ -15,6 +15,7 @@
       formatting = {
         alejandra.enable = true;
         prettier.enable = true;
+        prettierd.enable = true;
         stylua.enable = true;
         yamlfmt.enable = true;
       };

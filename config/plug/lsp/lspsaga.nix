@@ -56,9 +56,9 @@
       layout = "normal"; # normal or float
       winPosition = "right"; # left or right
       keys = {
-        jump = "z";
-        quit = "q";
-        toggleOrJump = "<space>";
+        jump = "<space>";
+        quit = "<Esc>";
+        toggleOrJump = "<CR>";
       };
     };
     scrollPreview = {

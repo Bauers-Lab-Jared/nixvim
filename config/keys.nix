@@ -33,11 +33,11 @@
       action = "+code";
     }
 
-    # {
-    #   mode = ["n" "v"];
-    #   key = "<leader>t";
-    #   action = "+test";
-    # }
+    {
+      mode = ["n"];
+      key = "<leader>t";
+      action = "+test";
+    }
 
     # Windows
 
@@ -343,28 +343,14 @@
       action = "<CMD> Grapple select index=4<CR>";
       options = {desc = "Grapple Select 4";};
     }
+
+    # Tests
+
+    {
+      mode = "n";
+      key = "<leader>tt";
+      action = "<CMD>make test<CR>";
+      options = {desc = "Run tests once";};
+    }
   ];
-  extraConfigLua = ''
-    function ToggleLineNumber()
-    if vim.wo.number then
-      vim.wo.number = false
-    else
-      vim.wo.number = true
-        vim.wo.relativenumber = false
-        end
-        end
-
-        function ToggleRelativeLineNumber()
-        if vim.wo.relativenumber then
-          vim.wo.relativenumber = false
-        else
-          vim.wo.relativenumber = true
-            vim.wo.number = false
-            end
-            end
-
-            function ToggleWrap()
-            vim.wo.wrap = not vim.wo.wrap
-            end
-  '';
 }

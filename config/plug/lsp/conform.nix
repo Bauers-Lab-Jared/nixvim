@@ -16,7 +16,7 @@
       lua = ["stylua"];
       nix = ["alejandra"];
       markdown = [["prettierd" "prettier"]];
-      yaml = ["yamllint" "yamlfmt"];
+      yaml = ["yamlfmt"];
     };
   };
 }

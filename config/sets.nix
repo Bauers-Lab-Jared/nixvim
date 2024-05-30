@@ -67,7 +67,7 @@
       foldenable = true;
 
       # Always keep 8 lines above/below cursor unless at start/end of file
-      scrolloff = 12;
+      scrolloff = 20;
 
       # Place a column line
       colorcolumn = "80";
@@ -84,6 +84,9 @@
 
       # We don't need to see things like INSERT anymore
       # showmode = false;
+
+      makeprg = "task";
+      makeef = "./build/err";
     };
   };
 }
