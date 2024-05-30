@@ -27,127 +27,127 @@
         };
       };
       "<leader>:" = {
-        action = "command_history, {}";
+        action = "command_history";
         options = {
           desc = "Command History";
         };
       };
       "<leader>;" = {
-        action = "command_history, {}";
+        action = "command_history";
         options = {
           desc = "Command History";
         };
       };
       "<leader>b" = {
-        action = "buffers, {}";
+        action = "buffers";
         options = {
           desc = "+buffer";
         };
       };
       "<leader>ff" = {
-        action = "find_files, {}";
+        action = "find_files";
         options = {
           desc = "Find project files";
         };
       };
       "<leader>fn" = {
-        action = "live_grep, {}";
+        action = "live_grep";
         options = {
           desc = "Find text";
         };
       };
       "<leader>fr" = {
-        action = "resume, {}";
+        action = "resume";
         options = {
           desc = "Resume";
         };
       };
       "<leader>f." = {
-        action = "oldfiles, {}";
+        action = "oldfiles";
         options = {
           desc = "Recent";
         };
       };
       "<leader>fb" = {
-        action = "buffers, {}";
+        action = "buffers";
         options = {
           desc = "Buffers";
         };
       };
       "<leader>fg" = {
-        action = "git_files, {}";
+        action = "git_files";
         options = {
           desc = "Search git files";
         };
       };
       "<leader>gc" = {
-        action = "git_commits, {}";
+        action = "git_commits";
         options = {
           desc = "Commits";
         };
       };
       "<leader>gs" = {
-        action = "git_status, {}";
+        action = "git_status";
         options = {
           desc = "Status";
         };
       };
       "<leader>fa" = {
-        action = "autocommands, {}";
+        action = "autocommands";
         options = {
           desc = "Auto Commands";
         };
       };
       "<leader>f/" = {
-        action = "current_buffer_fuzzy_find, {}";
+        action = "current_buffer_fuzzy_find";
         options = {
           desc = "Buffer";
         };
       };
       "<leader>fc" = {
-        action = "commands, {}";
+        action = "commands";
         options = {
           desc = "Commands";
         };
       };
       "<leader>fD" = {
-        action = "diagnostics, {}";
+        action = "diagnostics";
         options = {
           desc = "Workspace diagnostics";
         };
       };
       "<leader>fh" = {
-        action = "help_tags, {}";
+        action = "help_tags";
         options = {
           desc = "Help pages";
         };
       };
       "<leader>fH" = {
-        action = "highlights, {}";
+        action = "highlights";
         options = {
           desc = "Search Highlight Groups";
         };
       };
       "<leader>fk" = {
-        action = "keymaps, {}";
+        action = "keymaps";
         options = {
           desc = "Keymaps";
         };
       };
       "<leader>fM" = {
-        action = "man_pages, {}";
+        action = "man_pages";
         options = {
           desc = "Man pages";
         };
       };
       "<leader>fm" = {
-        action = "marks, {}";
+        action = "marks";
         options = {
           desc = "Jump to Mark";
         };
       };
       "<leader>fo" = {
-        action = "vim_options, {}";
+        action = "vim_options";
         options = {
           desc = "Options";
         };
