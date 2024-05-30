@@ -13,3 +13,4 @@
 
 - [ ] Add spell check?
 - [ ] Add Wezterm mux integration?
+- [ ] Configure copilot
