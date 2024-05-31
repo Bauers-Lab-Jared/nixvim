@@ -4,14 +4,11 @@
     lsp = {
       enable = true;
       servers = {
-        html = {enable = true;};
         jsonls.enable = true;
-        nixd.enable = true;
-        lua-ls = {enable = true;};
-        marksman = {enable = true;};
-        yamlls = {
-          enable = true;
-        };
+        lua-ls.enable = true;
+        bashls.enable = true;
+        marksman.enable = true;
+        yamlls.enable = true;
       };
       keymaps = {
         silent = true;

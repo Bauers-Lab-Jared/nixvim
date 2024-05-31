@@ -6,14 +6,13 @@
     sources = {
       code_actions = {
         gitsigns.enable = true;
-        statix.enable = true;
       };
       diagnostics = {
-        statix.enable = true;
         yamllint.enable = true;
+        codespell.enable = true;
+        markdownlint_cli2.enable = true;
       };
       formatting = {
-        alejandra.enable = true;
         prettier.enable = true;
         prettierd.enable = true;
         stylua.enable = true;

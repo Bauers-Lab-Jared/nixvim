@@ -3,14 +3,12 @@
 in {
   colorschemes = {
     gruvbox = {
-      enable = false;
       settings = {
         transparent_mode = true;
       };
     };
 
     onedark = {
-      enable = false;
       settings = {
         style = "deep";
         transparent = false;
@@ -34,7 +32,6 @@ in {
     solarized-osaka = let
       transparent = true;
     in {
-      enable = true;
       settings = {
         inherit transparent;
         styles = {
@@ -115,7 +112,6 @@ in {
     };
 
     tokyonight = {
-      enable = false;
       settings = {
         style = "storm";
         transparent = false;
@@ -153,9 +149,7 @@ in {
         '';
       };
     };
-    oxocarbon.enable = false;
     rose-pine = {
-      enable = false;
       settings = {
         style = "main"; #  "main", "moon", "dawn" or raw lua code
         styles = {
@@ -181,7 +175,6 @@ in {
       };
     };
     catppuccin = {
-      enable = false;
       settings = {
         background = {
           light = "macchiato";

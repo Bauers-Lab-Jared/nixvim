@@ -31,5 +31,9 @@
           title = "Bauer's Lab NixVim";
         };
       };
+
+      alias = {
+        packages.default = "nixvim";
+      };
     };
 }
