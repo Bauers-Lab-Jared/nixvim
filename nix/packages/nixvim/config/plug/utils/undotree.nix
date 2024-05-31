@@ -34,7 +34,4 @@
       };
     }
   ];
-  extraConfigLua = ''
-    vim.opt.undodir = "./.nvim/undodir";
-  '';
 }
