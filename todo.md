@@ -2,7 +2,7 @@
 
 - [ ] Configure dap
 - [ ] Configure neotest
-- [ ] Rebuild flake structure
+- [x] Rebuild flake structure
   - Facilitate composable configs
     - Default config
     - User customized config
@@ -11,6 +11,6 @@
 
 # Long term
 
-- [ ] Add spell check?
+- [x] Add spell check?
 - [ ] Add Wezterm mux integration?
 - [ ] Configure copilot
