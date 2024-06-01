@@ -13,6 +13,9 @@
 }:
 mkShell {
   packages = [
-    (lib.${namespace}.mkNixvim {inherit pkgs;})
+    (lib.${namespace}.mkNixvim {
+      inherit pkgs;
+      addons = ["proj-nix"];
+    })
   ];
 }
