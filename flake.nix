@@ -2,7 +2,7 @@
   description = "Bauer's Lab - Composable NixVim Configurations";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.05";
 
     snowfall-lib = {
       url = "github:snowfallorg/lib";
