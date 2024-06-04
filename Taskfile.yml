@@ -1,0 +1,6 @@
+version: 3
+tasks:
+  reload:
+    cmds:
+      - direnv reload
+      - nix-direnv-reload

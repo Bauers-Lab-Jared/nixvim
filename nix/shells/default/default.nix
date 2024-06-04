@@ -13,6 +13,7 @@
 }:
 mkShell {
   packages = [
+    pkgs.go-task
     (lib.${namespace}.mkNixvim {
       inherit pkgs;
       addons = ["proj-nix"];
