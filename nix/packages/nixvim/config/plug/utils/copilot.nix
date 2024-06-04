@@ -1,10 +1,7 @@
-{pkgs, ...}: {
-  extraPlugins = [
-    pkgs.vimPlugins.CopilotChat-nvim
-  ];
-  extraConfigLua = ''
-    require("CopilotChat").setup { }
-  '';
+{
+  plugins.copilot-chat = {
+    enable = true;
+  };
 
   keymaps = [
     {
@@ -19,18 +16,28 @@
     }
     {
       mode = "x";
+      key = "<leader>ar";
+      action = "<cmd>CopilotChatReview<cr>";
+    }
+    {
+      mode = "x";
       key = "<leader>af";
-      action = "<cmd>CopilotChatFix<cr>";
+      action = "<cmd>CopilotChatFixDiagnostic<cr>";
+    }
+    {
+      mode = "x";
+      key = "<leader>at";
+      action = "<cmd>CopilotChatTests<cr>";
     }
     {
       mode = "x";
       key = "<leader>ad";
-      action = "<cmd>CopilotChatDocs<cr>";
+      action = "<cmd>CopilotChatOptimize<cr>";
     }
     {
       mode = "x";
       key = "<leader>ac";
-      action = "<cmd>CopilotChatCommit<cr>";
+      action = "<cmd>CopilotChatCommitStaged<cr>";
     }
   ];
 }
