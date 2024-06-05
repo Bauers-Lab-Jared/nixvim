@@ -347,9 +347,15 @@
     # debug
     {
       mode = "n";
+      key = "<leader>dt";
+      action = "<CMD>lua require('dap').terminate()<CR>";
+      options = {desc = "Terminate session";};
+    }
+    {
+      mode = "n";
       key = "<leader>db";
-      action = "<CMD>lua require('dap').toggle_breakpoint()<CR>";
-      options = {desc = "Toggle breakpoint";};
+      action = "<CMD>! task bd<CR>";
+      options = {desc = "Build debug binary";};
     }
     {
       mode = "n";
@@ -373,11 +379,23 @@
       '';
       options = {desc = "Eval var under cursor";};
     }
+    {
+      mode = "n";
+      key = "<leader>du";
+      action = "<CMD>lua require('dapui').open()<CR>";
+      options = {desc = "Open debug ui";};
+    }
+    {
+      mode = "n";
+      key = "<leader>dq";
+      action = "<CMD>lua require('dapui').close()<CR>";
+      options = {desc = "Quit debug ui";};
+    }
 
     {
       mode = "n";
       key = "<f1>";
-      action = "<CMD>lua require('dap').disconnect()<CR>";
+      action = "<CMD>lua require('dap').terminate()<CR>";
       options = {desc = "Debug Disconnect";};
     }
     {
