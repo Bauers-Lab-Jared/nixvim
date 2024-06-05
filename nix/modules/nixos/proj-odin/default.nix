@@ -1,4 +1,7 @@
-{
+{pkgs, ...}: {
+  extraPackages = [
+    pkgs.gdb
+  ];
   plugins = {
     lsp.servers.ols.enable = true;
 
