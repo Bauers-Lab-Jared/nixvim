@@ -8,7 +8,7 @@
     dap = {
       adapters.executables.gdb = {
         command = "gdb";
-        args = ["-i dap"];
+        args = ["-i" "dap"];
       };
 
       configurations = {
