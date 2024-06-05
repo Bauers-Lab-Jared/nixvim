@@ -26,8 +26,8 @@
       };
 
       extensions = {
-        dap-ui.enabled = true;
-        dap-virtual-text.enabled = true;
+        dap-ui.enable = true;
+        dap-virtual-text.enable = true;
       };
     };
   };
