@@ -7,8 +7,8 @@
 
     dap = {
       adapters.executables.gdb = {
-        command = "task";
-        args = ["debug-dap"];
+        command = "gdb";
+        args = ["-i dap"];
       };
 
       configurations = {
@@ -17,7 +17,7 @@
             name = "Launch";
             type = "gdb";
             request = "launch";
-            program = "\${workspaceFolder}/debug/bin/main";
+            program = "\${workspaceFolder}/debug/main";
             args = {};
             cwd = "\${workspaceFolder}";
             stopOnEntry = false;
