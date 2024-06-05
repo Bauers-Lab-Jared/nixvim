@@ -6,8 +6,9 @@
     lsp.servers.ols.enable = true;
 
     dap = {
-      adapters.executables = {
-        command = "task debug-dap";
+      adapters.executables.gdb = {
+        command = "task";
+        args = ["debug-dap"];
       };
 
       configurations = {
