@@ -30,7 +30,7 @@
       numShortcut = true;
       keys = {
         exec = "<CR>";
-        quit = ["<Esc>" "q"];
+        quit = ["<Esc>"];
       };
     };
     lightbulb = {
