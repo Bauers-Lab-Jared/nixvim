@@ -21,11 +21,11 @@
       action = "+git";
     }
 
-    # {
-    #   mode = ["n" "v"];
-    #   key = "<leader>d";
-    #   action = "+debug";
-    # }
+    {
+      mode = ["n" "v"];
+      key = "<leader>d";
+      action = "+debug";
+    }
 
     {
       mode = ["n" "v"];
@@ -342,6 +342,86 @@
       key = "<F5>";
       action = "<CMD> Grapple select index=4<CR>";
       options = {desc = "Grapple Select 4";};
+    }
+
+    # debug
+    {
+      mode = "n";
+      key = "<leader>db";
+      action = "<CMD>lua require('dap').toggle_breakpoint()<CR>";
+      options = {desc = "Toggle breakpoint";};
+    }
+    {
+      mode = "n";
+      key = "<leader>dc";
+      action = "<CMD>lua require('dap').run_to_cursor()<CR>";
+      options = {desc = "Run to cursor";};
+    }
+    {
+      mode = "n";
+      key = "<leader>dr";
+      action = "<CMD>lua require('dap').repl.toggle()<CR>";
+      options = {desc = "Toggle repl";};
+    }
+    {
+      mode = "n";
+      key = "<leader>de";
+      action = ''
+        function()
+          require('dapui').eval(nil, {enter = true})
+        end
+      '';
+      options = {desc = "Eval var under cursor";};
+    }
+
+    {
+      mode = "n";
+      key = "<f1>";
+      action = "<CMD>lua require('dap').disconnect()<CR>";
+      options = {desc = "Debug Disconnect";};
+    }
+    {
+      mode = "n";
+      key = "<f2>";
+      action = "<CMD>lua require('dap').continue()<CR>";
+      options = {desc = "Debug Continue";};
+    }
+    {
+      mode = "n";
+      key = "<f3>";
+      action = "<CMD>lua require('dap').step_into()<CR>";
+      options = {desc = "Debug Step into";};
+    }
+    {
+      mode = "n";
+      key = "<f4>";
+      action = "<CMD>lua require('dap').step_over()<CR>";
+      options = {desc = "Debug Step over";};
+    }
+
+    {
+      mode = "n";
+      key = "<f9>";
+      action = "<CMD>lua require('dap').toggle_breakpoint()<CR>";
+      options = {desc = "Toggle breakpoint";};
+    }
+    {
+      mode = "n";
+      key = "<f10>";
+      action = "<CMD>lua require('dap').restart()<CR>";
+      options = {desc = "Debug Restart";};
+    }
+    {
+      mode = "n";
+      key = "<f11>";
+      action = "<CMD>lua require('dap').step_out()<CR>";
+      options = {desc = "Debug Step out";};
+    }
+    {
+      mode = "n";
+      key = "<f12>";
+      action = "<CMD>lua require('dap').step_back()<CR>";
+      options = {desc = "Debug Step back";};
     }
 
     # Tests
