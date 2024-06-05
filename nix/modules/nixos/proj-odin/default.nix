@@ -7,8 +7,7 @@
 
     dap = {
       adapters.executables = {
-        command = "gdb";
-        args = ["-i" "dap"];
+        command = "task debug-dap";
       };
 
       configurations = {
