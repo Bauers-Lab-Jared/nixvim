@@ -33,6 +33,7 @@
     ./plug/mini/operators.nix
     ./plug/mini/files.nix
     ./plug/mini/hipatterns.nix
+    ./plug/mini/comment.nix
 
     ./plug/snippets/luasnip.nix
 
