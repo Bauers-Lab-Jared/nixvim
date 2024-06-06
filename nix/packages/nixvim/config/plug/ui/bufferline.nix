@@ -64,7 +64,7 @@
     {
       mode = "n";
       key = "<leader>bdd";
-      action = "<Cmd>BufferLineGroupClose ungrouped<CR>";
+      action = "<Cmd>BufferLinePickClose<CR>";
       options = {
         desc = "Delete non-pinned buffers";
       };
