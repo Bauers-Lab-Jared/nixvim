@@ -267,20 +267,6 @@
       options = {desc = "Delete to void register";};
     }
 
-    # <C-c> instead of pressing esc just because
-    {
-      mode = "i";
-      key = "<C-c>";
-      action = "<Esc>";
-    }
-
-    {
-      mode = "n";
-      key = "<leader>zz";
-      action = "<CMD> ZenMode | Pencil<CR>";
-      options = {desc = "Toggle writting mode";};
-    }
-
     {
       mode = "n";
       key = "\\";
