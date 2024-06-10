@@ -42,17 +42,17 @@
     # Windows
 
     {
+      mode = ["n" "v"];
       key = ",";
       action = ":";
       options.desc = ": (command mode)";
-      mode = "n";
     }
 
     {
+      mode = ["n" "v"];
       key = ";";
       action = ":";
       options.desc = ": (command mode)";
-      mode = "n";
     }
 
     {
