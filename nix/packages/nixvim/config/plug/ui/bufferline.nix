@@ -66,7 +66,7 @@
       key = "<leader>bdd";
       action = "<Cmd>BufferLinePickClose<CR>";
       options = {
-        desc = "Delete non-pinned buffers";
+        desc = "Delete a specific buffer";
       };
     }
 
