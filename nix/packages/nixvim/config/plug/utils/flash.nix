@@ -23,7 +23,7 @@
   keymaps = [
     {
       mode = ["n" "x" "o"];
-      key = "z";
+      key = "zz";
       action = ''<cmd>lua require('flash').jump({ search = { mode = function(str) return "\\<" .. str end, }, })<cr>'';
       options = {
         desc = "Flash";
@@ -32,7 +32,7 @@
 
     {
       mode = ["n" "x" "o"];
-      key = "<C-z>";
+      key = "zt";
       action = "<cmd>lua require('flash').treesitter()<cr>";
       options = {
         desc = "Flash Treesitter";
