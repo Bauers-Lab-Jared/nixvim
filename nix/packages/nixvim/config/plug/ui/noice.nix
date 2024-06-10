@@ -33,4 +33,14 @@
       };
     };
   };
+  keymaps = [
+    {
+      mode = "n";
+      key = "<leader>fp";
+      action = "<cmd>NoiceTelescope<cr>";
+      options = {
+        desc = "Popup Message History";
+      };
+    }
+  ];
 }
