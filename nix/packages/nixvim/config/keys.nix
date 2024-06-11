@@ -1,4 +1,4 @@
-{
+{helpers, ...}: {
   globals.mapleader = " ";
 
   keymaps = [
@@ -433,8 +433,10 @@
     {
       mode = "n";
       key = "<leader>tt";
-      action = "<CMD>make test<CR>";
-      options = {desc = "Run tests once";};
+      action = "<cmd>lua require('noice').redirect('! task test')<cr>";
+      options = {
+        desc = "Run tests once";
+      };
     }
   ];
 }
