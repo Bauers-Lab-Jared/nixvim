@@ -81,6 +81,19 @@
       lualine_x = [
         (removeComponent "fileformat")
         {
+          fmt = ''
+            function()
+              return require("noice").api.statusline.mode.get()
+            end
+          '';
+          extraConfig.cond = helpers.mkRaw ''
+            function()
+              return require("noice").api.statusline.mode.has()
+            end
+          '';
+          color = {fg = "fg";};
+        }
+        {
           name = "filetype";
           color = {
             bg = "bg";
