@@ -1,5 +1,8 @@
 version: 3
 tasks:
+  default:
+    cmds:
+      - task: env
   test:
     cmds:
       - echo "We did it."
