@@ -11,10 +11,10 @@
     };
     settings = {
       defaults = {
+        layout_strategy = "vertical";
         layout_config = {
-          horizontal = {
-            prompt_position = "top";
-          };
+          height = 0.95;
+          width = 0.95;
         };
         sorting_strategy = "ascending";
       };
