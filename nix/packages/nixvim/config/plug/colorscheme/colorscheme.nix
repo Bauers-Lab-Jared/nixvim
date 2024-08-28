@@ -151,12 +151,13 @@ in {
     };
     rose-pine = {
       settings = {
-        style = "main"; #  "main", "moon", "dawn" or raw lua code
+        variant = "moon"; #  "main", "moon", "dawn" or raw lua code
         styles = {
-          bold = false;
-          italic = false;
+          bold = true;
+          italic = true;
           transparency = true;
         };
+        enable.terminal = true;
         transparentBackground = true;
         highlightGroups = {
           TelescopeNormal = {
@@ -191,6 +192,8 @@ in {
           notify = true;
           gitsigns = true;
           which_key = true;
+          dap = true;
+          dap-ui = true;
           illuminate = {
             enabled = true;
           };
