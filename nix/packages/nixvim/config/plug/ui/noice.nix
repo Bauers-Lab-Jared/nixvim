@@ -1,6 +1,13 @@
 {
   plugins.noice = {
     enable = true;
+    presets = {
+      bottom_search = false;
+      command_palette = false;
+      long_message_to_split = true;
+      inc_rename = false;
+      lsp_doc_border = true;
+    };
     notify = {
       enabled = false;
     };
@@ -14,6 +21,31 @@
       progress = {
         enabled = false;
         view = "mini";
+      };
+    };
+    views.popup = {
+      backend = "popup";
+      relative = "editor";
+      close = {
+        events = ["BufLeave"];
+        keys = ["q"];
+      };
+      enter = true;
+      border = {
+        style = "rounded";
+      };
+      position = "50%";
+      size = {
+        width = "95%";
+        height = "95%";
+      };
+      win_options = {
+        winhighlight = {
+          Normal = "NoicePopup";
+          FloatBorder = "NoicePopupBorder";
+        };
+        winbar = "";
+        foldenable = false;
       };
     };
     popupmenu = {
