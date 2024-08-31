@@ -22,6 +22,7 @@ helpers.neovim-plugin.mkNeovimPlugin config {
   };
 
   maintainers = [{none = {name = "none";};}];
+  colorscheme = null;
 
   settingsOptions = {
     transparent = helpers.defaultNullOpts.mkBool false ''
@@ -115,5 +116,8 @@ helpers.neovim-plugin.mkNeovimPlugin config {
     on_highlights = "function(highlights, colors) end";
   };
 
-  extraConfig = cfg: {opts.termguicolors = lib.mkDefault true;};
+  extraConfig = cfg: {
+    colorscheme = "solarized-osaka";
+    opts.termguicolors = lib.mkDefault true;
+  };
 }
