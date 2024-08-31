@@ -22,7 +22,7 @@
         then lib.sublist 1 100 configList
         else [];
 
-      nextNixvim = thisNixvim.nixvimExtend (elemAt configList 0);
+      nextNixvim = thisNixvim.extend (elemAt configList 0);
     in
       extendWithList {
         thisNixvim = nextNixvim;

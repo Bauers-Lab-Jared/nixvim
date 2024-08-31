@@ -1,7 +1,7 @@
 {
   plugins.which-key = {
     enable = true;
-    window = {
+    settings.win = {
       border = "rounded";
     };
   };

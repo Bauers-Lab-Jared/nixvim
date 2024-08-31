@@ -2,8 +2,6 @@
   plugins = {
     bufferline = {
       enable = true;
-      showBufferCloseIcons = false;
-      separatorStyle = "thick"; # “slant”, “padded_slant”, “slope”, “padded_slope”, “thick”, “thin”
     };
   };
   keymaps = [

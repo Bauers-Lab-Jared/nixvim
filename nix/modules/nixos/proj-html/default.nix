@@ -5,7 +5,7 @@
       cssls.enable = true;
       htmx.enable = true;
     };
-    conform-nvim.formattersByFt = {
+    conform-nvim.settings.formatters_by_ft = {
       html = [["prettierd" "prettier"]];
       css = [["prettierd" "prettier"]];
     };

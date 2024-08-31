@@ -11,7 +11,7 @@
     ./plug/colorscheme/solarized-osaka.nix
 
     ./plug/completion/cmp.nix
-    ./plug/completion/copilot-cmp.nix
+    #./plug/completion/copilot-cmp.nix
     ./plug/completion/lspkind.nix
     ./plug/completion/schemastore.nix
 

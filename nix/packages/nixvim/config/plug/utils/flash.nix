@@ -1,23 +1,22 @@
 {
   plugins.flash = {
     enable = true;
-    labels = "asdflqwertuiocbnm";
-    search = {
-      mode = "fuzzy";
-    };
-    jump = {
-      autojump = true;
-      nohlsearch = true;
-    };
-    label = {
-      uppercase = false;
-      rainbow = {
-        enabled = false;
-        shade = 5;
+    settings = {
+      label = {
+        labels = "asdflqwertuiocbnm";
+        after = false;
+        before = true;
+        distance = false;
+        exclude = "xwmgqjhvflduoyp";
+        uppercase = false;
       };
-    };
-    modes = {
-      char.enabled = false;
+      search = {
+        mode = "fuzzy";
+      };
+      jump = {
+        autojump = true;
+        nohlsearch = true;
+      };
     };
   };
   keymaps = [
