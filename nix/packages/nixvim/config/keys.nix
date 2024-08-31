@@ -438,5 +438,32 @@
         desc = "Run tests once";
       };
     }
+
+    # Command mode
+    {
+      mode = "c";
+      key = "<Left>";
+      action = "<Space><BS><Left>";
+    }
+    {
+      mode = "c";
+      key = "<Right>";
+      action = "<Space><BS><Right>";
+    }
+    {
+      mode = "c";
+      key = "<Down>";
+      action = "<C-Z><Right>";
+    }
+    {
+      mode = "c";
+      key = "<Up>";
+      action = "<C-Z><Left>";
+    }
+    {
+      mode = "c";
+      key = "<C-Space>";
+      action = "<C-Z>";
+    }
   ];
 }

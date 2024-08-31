@@ -44,6 +44,11 @@
       # Set completeopt to have a better completion experience
       completeopt = ["menuone" "noselect" "noinsert"]; # mostly just for cmp
 
+      #wildmenu options for command line completion
+      wildoptions = ["fuzzy" "pum" "tagfile"];
+      wildmode = "list";
+      wildignorecase = true;
+
       # Enable persistent undo history
       swapfile = false;
       backup = false;
