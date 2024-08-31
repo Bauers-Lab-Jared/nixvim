@@ -49,7 +49,7 @@
     ./plug/ui/telescope.nix
 
     ./plug/utils/yazi.nix #file manager
-    ./plug/utils/copilot.nix
+    #./plug/utils/copilot.nix
     ./plug/utils/flash.nix
     #./plug/utils/harpoon.nix
     ./plug/utils/grapple.nix
