@@ -47,6 +47,7 @@
     ./plug/ui/noice.nix
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
+    ./plug/ui/rainbow-delimiters.nix
 
     ./plug/utils/yazi.nix #file manager
     #./plug/utils/copilot.nix
