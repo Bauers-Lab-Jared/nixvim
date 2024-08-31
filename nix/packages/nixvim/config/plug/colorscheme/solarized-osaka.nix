@@ -11,12 +11,12 @@ helpers.neovim-plugin.mkNeovimPlugin config {
   originalName = "solarized-osaka.nvim";
   defaultPackage = pkgs.vimUtils.buildVimPlugin {
     pname = "solarized.nvim";
-    version = "2024-05-26";
+    version = "2024-08-31";
     src = pkgs.fetchFromGitHub {
       owner = "craftzdog";
       repo = "solarized-osaka.nvim";
-      rev = "a2a435aa0e6088ccc0d7c3aa2813c10570d90c87";
-      sha256 = "0az6sfxn34df6ld7frqi3dd5iajg6b13g75px7y5agga5vskmfy9";
+      rev = "126d394c0c979a99206214a2b6b8c86e456c9c0f";
+      sha256 = "sha256-uDSfLbXqKRSE2dLNVB1uQ5Grv4tPSzppQiR1t01UI+o=";
     };
     meta.homepage = "https://github.com/craftzdog/solarized-osaka.nvim/";
   };
