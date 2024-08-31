@@ -31,7 +31,7 @@
     ./plug/mini/ai.nix
     ./plug/mini/surround.nix
     ./plug/mini/operators.nix
-    ./plug/mini/files.nix
+    #./plug/mini/files.nix
     ./plug/mini/hipatterns.nix
     ./plug/mini/comment.nix
 
@@ -48,6 +48,7 @@
     ./plug/ui/nvim-notify.nix
     ./plug/ui/telescope.nix
 
+    ./plug/utils/yazi.nix #file manager
     ./plug/utils/copilot.nix
     ./plug/utils/flash.nix
     #./plug/utils/harpoon.nix
