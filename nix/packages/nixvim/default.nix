@@ -6,9 +6,11 @@
   # stdenv,
   ...
 }: let
-  nixvim' = inputs.nixvim.legacyPackages.${pkgs.system};
+  targetSystem = pkgs.system;
+  nixvim' = inputs.nixvim.legacyPackages.${targetSystem};
+  nixpkgs = inputs.nixpkgs.legacyPackages.${targetSystem};
 in
   nixvim'.makeNixvimWithModule {
-    inherit pkgs;
+    pkgs = nixpkgs;
     module = ./config;
   }
